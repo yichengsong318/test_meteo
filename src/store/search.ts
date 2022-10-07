@@ -1,34 +1,27 @@
 import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 export type SearchState = {
-  files: File[];
-  inProgress: boolean;
-  searchTerms: string;
-  searchDisplay: boolean;
-  loading: boolean;
+  favorites: string[];
 };
 
 const initialState: SearchState = {
-  files: [],
-  inProgress: false,
-  searchTerms: '',
-  searchDisplay: false,
-  loading: false
+  favorites: []
 };
 
 const searchSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
-    setSearchTerms(state, action) {
-      state.searchTerms = action.payload;
-    },
-    setSearchDisplay(state, action) {
-      state.searchDisplay = action.payload;
+    handleFavorite(state, action) {
+      if (state.favorites.includes(action.payload)) {
+        state.favorites = state.favorites.filter((item) => item !== action.payload);
+      } else {
+        state.favorites = [...state.favorites, action.payload];
+      }
     }
   }
 });
 
-export const { setSearchTerms, setSearchDisplay } = searchSlice.actions;
+export const { handleFavorite } = searchSlice.actions;
 
-export const contractsReducer = searchSlice.reducer;
+export const searchReducer = searchSlice.reducer;

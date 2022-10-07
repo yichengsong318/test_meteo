@@ -1,12 +1,11 @@
 import { configureStore, ThunkDispatch } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 import { AnyAction, combineReducers, EmptyObject } from 'redux';
-import { setSearchTerms, setSearchDisplay } from './search';
+import { searchReducer, SearchState } from './search';
 import logger from 'redux-logger';
 
 const reducers = combineReducers({
-  setSearchTerms,
-  setSearchDisplay
+  search: searchReducer
 });
 
 const middlewareConfig = {
@@ -27,6 +26,12 @@ const store = configureStore({
 export type RootState = ReturnType<typeof reducers>;
 
 export type AppDispatch = typeof store.dispatch;
-export const useAppDispatch = (): any => useDispatch<AppDispatch>();
+export const useAppDispatch = (): ThunkDispatch<
+  EmptyObject & {
+    search: SearchState;
+  },
+  undefined,
+  AnyAction
+> => useDispatch<AppDispatch>();
 
 export { store };

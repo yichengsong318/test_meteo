@@ -1,5 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink, useLocation } from 'react-router-dom';
+import { RootState } from 'store';
+import { v4 as uuid } from 'uuid';
 
 type SidebarProps = {
   sidebarOpen: boolean;
@@ -9,7 +12,7 @@ type SidebarProps = {
 function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
   const location = useLocation();
   const { pathname } = location;
-
+  const favorites = useSelector((state: RootState) => state.search.favorites);
   const trigger = useRef<HTMLButtonElement>(null);
   const sidebar = useRef<HTMLDivElement>(null);
 
@@ -58,21 +61,28 @@ function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
           <div>
             <span className="text-white">Favourites</span>
             <ul className="mt-3">
-              <li className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${pathname === '/' && 'bg-slate-900'}`}>
-                <NavLink
-                  end
-                  to="/"
-                  className={`block text-slate-200 hover:text-white truncate transition duration-150 ${
-                    pathname === '/' && 'hover:text-slate-200'
+              {favorites.map((favorite) => (
+                <li
+                  key={uuid()}
+                  className={`px-3 py-2 rounded-sm mb-0.5 last:mb-0 ${
+                    pathname === `/details/${favorite}` && 'bg-slate-900'
                   }`}
                 >
-                  <div className="flex items-center">
-                    <span className="ml-3 text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
-                      Home
-                    </span>
-                  </div>
-                </NavLink>
-              </li>
+                  <NavLink
+                    end
+                    to={`/details/${favorite}`}
+                    className={`block text-slate-200 hover:text-white truncate transition duration-150 ${
+                      pathname === `/details/${favorite}` && 'hover:text-slate-200'
+                    }`}
+                  >
+                    <div className="flex items-center">
+                      <span className="ml-3 text-sm font-medium duration-200 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100">
+                        {favorite}
+                      </span>
+                    </div>
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
