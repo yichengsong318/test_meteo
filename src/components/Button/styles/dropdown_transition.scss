@@ -1,0 +1,42 @@
+// The following does a translateY down (in) and up (out)
+// .dropdownitem-enter {
+//   transform: translateY(-0.5rem);
+//   transition: 0.3s cubic-bezier(0, 1, 0.5, 1);
+
+//   &.dropdownitem-enter-active {
+//     transform: translateY(0%);
+//   }
+// }
+
+// .dropdownitem-exit {
+//   opacity: 1;
+//   transform: translateY(0%);
+//   transition: 0.2s cubic-bezier(0, 1, 0.5, 1);
+
+//   &.dropdownitem-exit-active {
+//     opacity: 0;
+//     transform: translateY(-0.5rem);
+//   }
+// }
+
+// The following reveals the content from the top down. Wrap the container with react-spring
+// to have smooth background size changes when layouts change size while being displayed.
+.dropdownitem-enter {
+  max-height: 0;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+
+  &.dropdownitem-enter-active {
+    max-height: 500px;
+  }
+}
+
+.dropdownitem-exit {
+  max-height: 500px;
+  transition: 0.3s ease-out;
+  overflow: hidden;
+
+  &.dropdownitem-exit-active {
+    max-height: 0;
+  }
+}

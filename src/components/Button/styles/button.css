@@ -1,0 +1,214 @@
+.button {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #333;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.button:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #333;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #171617;
+}
+
+.button:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #333;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #171617;
+}
+
+/* Pink */
+.button-pink {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #e86fb7;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.button-pink:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #e86fb7;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #171617;
+}
+
+.button-pink:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #e86fb7;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #171617;
+}
+
+/* Green */
+.button-green {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #02e8b1;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.button-green:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #02e8b1;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #171617;
+}
+
+.button-green:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #02e8b1;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #171617;
+}
+
+/* SAME AS ABOVE BUT WITH LIGHT BACKGROUND */
+.buttonlight {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #333;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.buttonlight:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #333;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #1b1b1b;
+}
+
+.buttonlight:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #333;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #1b1b1b;
+}
+
+/* Pink */
+.buttonlight-pink {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #e86fb7;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.buttonlight-pink:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #e86fb7;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #1b1b1b;
+}
+
+.buttonlight-pink:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #e86fb7;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #1b1b1b;
+}
+
+/* Green */
+.buttonlight-green {
+  background: #000;
+  color: white;
+  display: inline-block;
+  padding: 8px 10px;
+  border: 1px solid #02e8b1;
+  box-shadow: none;
+  font-family: sans-serif;
+  position: relative;
+}
+
+.buttonlight-green:before {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-right: 0.1px solid #02e8b1;
+  left: -5.3px;
+  top: -7.3px;
+  transform: rotate(45deg);
+  background: #1b1b1b;
+}
+
+.buttonlight-green:after {
+  content: "";
+  width: 11px;
+  height: 16px;
+  position: absolute;
+  border-left: 0.1px solid #02e8b1;
+  right: -5.2px;
+  bottom: -7.3px;
+  transform: rotate(43deg);
+  background: #1b1b1b;
+}
