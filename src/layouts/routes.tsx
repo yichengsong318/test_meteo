@@ -1,5 +1,5 @@
 import { Fragment, Suspense, lazy } from 'react';
-import { Route, Navigate, Routes as Switch } from 'react-router-dom';
+import { Route, Routes as Switch } from 'react-router-dom';
 import LoadingScreen from 'components/LoadingScreen';
 import { Routes } from './types';
 import { MainLayout } from 'layouts/MainLayout';
@@ -7,7 +7,6 @@ import { MainLayout } from 'layouts/MainLayout';
 export const renderRoutes = (routes: Routes = []): JSX.Element => (
   <Switch>
     {routes.map((route, index) => {
-      const Guard = route.guard || Fragment;
       const Layout = route.layout || Fragment;
       const Component = route.component;
 

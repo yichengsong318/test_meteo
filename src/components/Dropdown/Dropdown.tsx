@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import DropdownItem from './DropdownItem';
+import SearchDropdownItem from './SearchDropdownItem';
 
 interface DropdownProps {
   handleClick: (e?: any) => void;
   children?: JSX.Element | JSX.Element[];
+  DropdownItem: any;
   [key: string]: any;
 }
 
-export const Dropdown = ({ menus = [], children, handleClick }: DropdownProps) => {
+export const Dropdown = ({ menus = [], children, handleClick, DropdownItem }: DropdownProps) => {
   const [isExpanded, setExpanded] = useState(false);
 
   const handleSelect = (index: number) => {

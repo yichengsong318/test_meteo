@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import Dropdown from 'components/Dropdown/Dropdown';
 import { SearchIcon } from 'components/icons/SearchIcon';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import gradoviData from 'utils/gradovi.json';
+import SearchDropdownItem from 'components/Dropdown/SearchDropdownItem';
 
 const Dashboard = (): JSX.Element => {
   const [searchVal, setSearchVal] = useState('');
   const navigate = useNavigate();
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchVal(e.target.value);
   };
 
@@ -22,7 +23,7 @@ const Dashboard = (): JSX.Element => {
     <div className="w-full text-center font-normal text-6xl pt-24">
       <span>Meteo App</span>
       <div className="w-3/4 justify-center mx-auto mt-10 rounded-md">
-        <Dropdown menus={dropdownMenus} handleClick={handleClick}>
+        <Dropdown DropdownItem={SearchDropdownItem} menus={dropdownMenus} handleClick={handleClick}>
           <input
             type="text"
             value={searchVal}
