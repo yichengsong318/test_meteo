@@ -18,10 +18,13 @@ const searchSlice = createSlice({
       } else {
         state.favorites = [...state.favorites, action.payload];
       }
+    },
+    removeFavorites(state) {
+      state.favorites = [];
     }
   }
 });
 
-export const { handleFavorite } = searchSlice.actions;
+export const { handleFavorite, removeFavorites } = searchSlice.actions;
 
 export const searchReducer = searchSlice.reducer;

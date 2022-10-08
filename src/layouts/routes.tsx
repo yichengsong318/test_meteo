@@ -40,6 +40,12 @@ export const routes: Routes = [
   },
   {
     exact: true,
+    path: '/settings',
+    component: lazy(() => import('pages/Settings')),
+    layout: MainLayout
+  },
+  {
+    exact: true,
     path: 'details/:id',
     component: lazy(() => import('pages/Detail')),
     layout: MainLayout

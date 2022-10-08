@@ -100,56 +100,117 @@ const Detail = (): JSX.Element => {
                 defaultChecked={true}
                 onChange={handleHourChange}
                 className="mr-2"
+                id="temperature_2m"
               />
-              Temperature (2 m)
+              <label htmlFor="temperature_2m">Temperature (2 m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="weathercode" onChange={handleHourChange} className="mr-2" />
-              Weathercode
+              <input
+                type="checkbox"
+                value="weathercode"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="Weathercode"
+              />
+              <label htmlFor="Weathercode">Weathercode</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="windspeed_10m" onChange={handleHourChange} className="mr-2" />
-              Wind Speed (10 m)
+              <input
+                type="checkbox"
+                value="windspeed_10m"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="windspeed_10m"
+              />
+              <label htmlFor="windspeed_10m"> Wind Speed (10 m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="soil_temperature_0cm" onChange={handleHourChange} className="mr-2" />
-              Soil Temperature (0 cm)
+              <input
+                type="checkbox"
+                value="soil_temperature_0cm"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="soil_temperature_0cm"
+              />
+              <label htmlFor="soil_temperature_0cm">Soil Temperature (0 cm)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="relativehumidity_2m" onChange={handleHourChange} className="mr-2" />
-              Relative Humidity (2 m)
+              <input
+                type="checkbox"
+                value="relativehumidity_2m"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="relativehumidity_2m"
+              />
+              <label htmlFor="relativehumidity_2m">Relative Humidity (2 m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="pressure_msl" onChange={handleHourChange} className="mr-2" />
-              Sealevel Pressure
+              <input
+                type="checkbox"
+                value="pressure_msl"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="pressure_msl"
+              />
+              <label htmlFor="pressure_msl">Relative Humidity (2 m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="windspeed_80m" onChange={handleHourChange} className="mr-2" />
-              Wind speed (80m)
+              <input
+                type="checkbox"
+                value="windspeed_80m"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="windspeed_80m"
+              />
+              <label htmlFor="windspeed_80m">Wind speed (80m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="soil_temperature_6cm" onChange={handleHourChange} className="mr-2" />
-              Soil Temperature (6 cm)
+              <input
+                type="checkbox"
+                value="soil_temperature_6cm"
+                onChange={handleHourChange}
+                className="mr-2"
+                id="soil_temperature_6cm"
+              />
+              <label htmlFor="soil_temperature_6cm">Soil Temperature (6 cm)</label>
             </div>
           </div>
         )}
         {selectedItem === 'Daily View' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
             <div className="flex items-center">
-              <input type="checkbox" value="weathercode" onChange={handleDailyChange} className="mr-2" />
-              Weathercode
+              <input
+                type="checkbox"
+                value="weathercode"
+                onChange={handleDailyChange}
+                className="mr-2"
+                id="weathercode"
+              />
+              <label htmlFor="weathercode">Weathercode</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="precipitation_sum" onChange={handleDailyChange} className="mr-2" />
-              Precipitation Sum
+              <input
+                type="checkbox"
+                value="precipitation_sum"
+                onChange={handleDailyChange}
+                className="mr-2"
+                id="precipitation_sum"
+              />
+              <label htmlFor="precipitation_sum">Precipitation Sum</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="temperature_2m_max" onChange={handleDailyChange} className="mr-2" />
-              Maximum Temprature (2 m)
+              <input
+                type="checkbox"
+                value="temperature_2m_max"
+                onChange={handleDailyChange}
+                className="mr-2"
+                id="temperature_2m_max"
+              />
+              <label htmlFor="temperature_2m_max">Maximum Temprature (2 m)</label>
             </div>
             <div className="flex items-center">
-              <input type="checkbox" value="rain_sum" onChange={handleDailyChange} className="mr-2" />
-              Rain Sum
+              <input type="checkbox" value="rain_sum" onChange={handleDailyChange} className="mr-2" id="rain_sum" />
+              <label htmlFor="rain_sum">Rain Sum</label>
             </div>
           </div>
         )}

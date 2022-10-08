@@ -63,6 +63,46 @@ function Sidebar({ sidebarOpen, setSidebarOpen }: SidebarProps) {
           <div>
             <span className="text-white">Favourites</span>
             <ul className="mt-3">
+              <li
+                key={uuid()}
+                className={clsx('px-3 py-2 rounded-sm mb-0.5 last:mb-0', {
+                  'bg-slate-900': pathname === `/`
+                })}
+              >
+                <NavLink
+                  end
+                  to={`/`}
+                  className={clsx(`block text-slate-200 hover:text-white truncate transition duration-150`, {
+                    'hover:text-slate-200': pathname === `/`
+                  })}
+                >
+                  <div className="flex items-center">
+                    <span className="ml-3 text-sm font-medium duration-200 color-white lg:sidebar-expanded:opacity-100">
+                      Homepage
+                    </span>
+                  </div>
+                </NavLink>
+              </li>
+              <li
+                key={uuid()}
+                className={clsx('px-3 py-2 rounded-sm mb-0.5 last:mb-0', {
+                  'bg-slate-900': pathname === `/settings`
+                })}
+              >
+                <NavLink
+                  end
+                  to={`/settings`}
+                  className={clsx(`block text-slate-200 hover:text-white truncate transition duration-150`, {
+                    'hover:text-slate-200': pathname === `/settings`
+                  })}
+                >
+                  <div className="flex items-center">
+                    <span className="ml-3 text-sm font-medium duration-200 color-white lg:sidebar-expanded:opacity-100">
+                      Settings
+                    </span>
+                  </div>
+                </NavLink>
+              </li>
               {favorites.map((favorite) => (
                 <li
                   key={uuid()}
