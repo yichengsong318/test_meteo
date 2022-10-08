@@ -82,7 +82,7 @@ const Detail = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full text-center font-normal text-6xl pt-24">
+    <div className="w-full text-center font-normal text-3xl md:text-6xl pt-24">
       <span>Meteorologic data for {id}</span>
       <div className="w-3/4 justify-center mx-auto mt-10 rounded-md">
         <Dropdown DropdownItem={DropdownItem} menus={dropdownMenus} handleClick={handleClick}>
@@ -92,7 +92,7 @@ const Detail = (): JSX.Element => {
       </div>
       <div className="w-3/4 mx-auto mt-10">
         {selectedItem === 'Hourly View' && (
-          <div className="grid grid-cols-4 gap-4 text-base">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-base">
             <div className="flex items-center">
               <input
                 type="checkbox"
@@ -134,7 +134,7 @@ const Detail = (): JSX.Element => {
           </div>
         )}
         {selectedItem === 'Daily View' && (
-          <div className="grid grid-cols-2 gap-4 text-base">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-base">
             <div className="flex items-center">
               <input type="checkbox" value="weathercode" onChange={handleDailyChange} className="mr-2" />
               Weathercode
@@ -154,7 +154,7 @@ const Detail = (): JSX.Element => {
           </div>
         )}
         {chartData.datasets?.length > 0 && [...hourSelections, ...dailySelections].length > 0 && (
-          <div className="w-full px-4 pb-4 h-96">
+          <div className="w-full px-4 pb-4 h-96 mt-10">
             <Line data={chartData} />
           </div>
         )}

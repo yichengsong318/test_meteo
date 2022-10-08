@@ -10,7 +10,7 @@
 }
 
 .button:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -22,7 +22,7 @@
 }
 
 .button:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -46,7 +46,7 @@
 }
 
 .button-pink:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -58,7 +58,7 @@
 }
 
 .button-pink:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -82,7 +82,7 @@
 }
 
 .button-green:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -94,7 +94,7 @@
 }
 
 .button-green:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -118,7 +118,7 @@
 }
 
 .buttonlight:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -130,7 +130,7 @@
 }
 
 .buttonlight:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -154,7 +154,7 @@
 }
 
 .buttonlight-pink:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -166,7 +166,7 @@
 }
 
 .buttonlight-pink:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -190,7 +190,7 @@
 }
 
 .buttonlight-green:before {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
@@ -202,7 +202,7 @@
 }
 
 .buttonlight-green:after {
-  content: "";
+  content: '';
   width: 11px;
   height: 16px;
   position: absolute;
