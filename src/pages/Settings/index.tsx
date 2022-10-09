@@ -8,7 +8,7 @@ const Settings = (): JSX.Element => {
   const dispatch = useDispatch();
   const temperatureUnit = useSelector((state: RootState) => state.settings.temperature_unit);
 
-  const onChangeValue = (event: any) => {
+  const onChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setTemperature(event.target.value));
   };
 

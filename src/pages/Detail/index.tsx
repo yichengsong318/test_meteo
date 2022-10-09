@@ -27,6 +27,7 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const Detail = (): JSX.Element => {
   const { id } = useParams();
   const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  // @ts-ignore
   const [chartData, handleChartData] = useState({} as any);
   const [hourSelections, handleHourSelections] = useState<string[]>(['temperature_2m']);
   const [dailySelections, handleDailySelections] = useState<string[]>([]);

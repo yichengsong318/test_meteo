@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SearchDropdownItem from './SearchDropdownItem';
 
 interface DropdownProps {
   handleClick: (e?: any) => void;
