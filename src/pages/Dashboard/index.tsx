@@ -20,7 +20,7 @@ const Dashboard = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full text-center font-normal text-3xl md:text-6xl pt-24">
+    <div className="w-full text-center font-normal text-3xl md:text-6xl pt-24 px-4">
       <span>Meteo App</span>
       <div className="w-3/4 justify-center mx-auto mt-10 rounded-md">
         <Dropdown DropdownItem={SearchDropdownItem} menus={dropdownMenus} handleClick={handleClick}>

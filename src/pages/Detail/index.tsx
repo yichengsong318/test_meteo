@@ -18,6 +18,8 @@ import {
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import moment from 'moment';
+import { RootState } from 'store';
+import { useSelector } from 'react-redux';
 
 const dropdownMenus = [{ name: 'Hourly View' }, { name: 'Daily View' }];
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale);
@@ -33,6 +35,8 @@ const Detail = (): JSX.Element => {
     setSelectedItem(dropdownMenus[val].name);
   };
 
+  const temperatureUnit = useSelector((state: RootState) => state.settings.temperature_unit);
+
   useEffect(() => {
     const fetchData = async () => {
       const selected = gradoviData.filter((item) => item.city === id);
@@ -42,7 +46,9 @@ const Detail = (): JSX.Element => {
             hourSelections.length ? '&hourly=' : ''
           }${hourSelections.join(',')}${dailySelections.length ? '&daily=' : ''}${dailySelections.join(
             ','
-          )}&timeformat=unixtime&timezone=America%2FNew_York`
+          )}&timeformat=unixtime&timezone=America%2FNew_York${
+            temperatureUnit === 'fahrenheit' ? '&temperature_unit=fahrenheit' : ''
+          }`
         );
         if (hourSelections.length || dailySelections.length) {
           handleChartData({
@@ -61,7 +67,7 @@ const Detail = (): JSX.Element => {
       }
     };
     fetchData();
-  }, [selectedItem, hourSelections, dailySelections]);
+  }, [selectedItem, hourSelections, dailySelections, temperatureUnit]);
 
   const handleHourChange = (e: any) => {
     const { value, checked } = e.target;
@@ -82,7 +88,7 @@ const Detail = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full text-center font-normal text-3xl md:text-6xl pt-24">
+    <div className="w-full text-center font-normal text-3xl md:text-6xl px-4 pt-24">
       <span>Meteorologic data for {id}</span>
       <div className="w-3/4 justify-center mx-auto mt-10 rounded-md">
         <Dropdown DropdownItem={DropdownItem} menus={dropdownMenus} handleClick={handleClick}>

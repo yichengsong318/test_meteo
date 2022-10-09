@@ -13,7 +13,7 @@ const Settings = (): JSX.Element => {
   };
 
   return (
-    <div className="w-full text-center font-normal text-3xl md:text-6xl pt-24">
+    <div className="w-full text-center px-4 font-normal text-3xl md:text-6xl pt-24">
       <span>Application Settings</span>
       <div className="text-xl mt-10">
         <span>Temperature Unit</span>
@@ -41,17 +41,17 @@ const Settings = (): JSX.Element => {
           Fahrenheit °F
         </label>
       </div>
-      <div className="flex mt-16 w-1/2 mx-auto">
+      <div className="lg:flex mt-16 md:w-1/2 mx-auto sm:p-0 p-4">
         <Button
           text="Revert settings to default"
           light={true}
-          className="bg-gray-100 border border-[#EF2C2C] rounded-xl hover:bg-white text-[#EF2C2C] w-auto text-center md:text-left lg:text-lg"
+          className="bg-gray-100 border border-[#EF2C2C] rounded-xl hover:bg-white text-[#EF2C2C] w-auto text-center md:text-left text-lg"
           onClick={() => dispatch(defaultSetting())}
         />
         <Button
           text="Delete favourites"
           light={true}
-          className="bg-gray-100 border border-[#EF2C2C] rounded-xl hover:bg-white text-[#EF2C2C] ml-auto w-auto text-center md:text-left lg:text-lg"
+          className="bg-gray-100 border mt-5 lg:mt-0 border-[#EF2C2C] rounded-xl hover:bg-white text-[#EF2C2C] ml-auto w-auto text-center md:text-left text-lg"
           onClick={() => dispatch(removeFavorites())}
         />
       </div>
